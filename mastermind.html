@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap&subset=latin-ext" rel="stylesheet">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<link rel="stylesheet" href="mastermind.css">
+	<title>MasterMind</title>
+	<script src="mastermind.js"></script>
+</head>
+<body>
+	<table class="table">
+		<thead>
+			<tr>
+				<th scope="col" colspan="7"><h1>Mastermind game</h1></th>
+			</tr>
+			<tr>
+				<th scope="col" style="font-size: 150%; color:#00ff00;" onclick="$('#help').css('display','block');" title="If you click on 'cmon' the game will start">?</th>
+				<th class="pzth" scope="col" onclick="start();">C</th>
+				<th class="pzth" scope="col" onclick="start();">M</th>
+				<th class="pzth" scope="col" onclick="start();">O</th>
+				<th class="pzth" scope="col" onclick="start();">N</th>
+				<th id="tim" scope="col" onclick="start();" onmouseover="$('#tim').removeClass('hide');">Start</th>
+				<th scope="col">X</th>
+			</tr>
+		</thead>
+		<tbody id="solutions">	
+		</tbody>
+	</table>
+	<div id="help" onclick="$('#help').css('display','none');">
+		<h2>Click these texts, that destroy them.</h2>
+		You could play the game with cmon buttons or start button.
+		X button is for disappearing timer, but when your mouse go over that, appear again and when mouse left that, disappear again.
+		If you click to little grey buttons, the color pickers appear. You need figure out what is the color combination.
+		The color combination has 4 DIFFERENT color from 8 optional color (red, green, blue, black, white, cyan, magenta, yellow).
+		When you check a solution, you get some information for the combination OR win the game, if your combination is correct.
+		The respond colors means the next:
+		<ul style="list-style-type:square;">
+			<li>Green is a correct color on the correct place.</li>
+			<li>Yellow is a correct color on an another place.</li>
+			<li>Red is a fail color.</li>
+		</ul>
+		<h3>Good luck!</h3>
+		<h2>Click these texts, that destroy them.</h2>
+	</div>
+	<noscript><div id="nojs">The JavaScript is disabled. PLS, enable the JavaScript.</div></noscript>
+	<h2><a name="bak" href="/../game.html">Back</a></h2>
+	<h2><a name="home" href="/../index.html">Homepage</a></h2> 
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+</body>
+</html>
